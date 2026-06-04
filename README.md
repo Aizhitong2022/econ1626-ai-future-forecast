@@ -21,9 +21,13 @@ index.html
 README.md
 assets/
   css/
+    style.css
   js/
+    main.js
   data/
+    .gitkeep
   img/
+    .gitkeep
 notes/
   research-log.md
   ai-use-log.md
@@ -36,6 +40,8 @@ Open `index.html` directly in a web browser.
 
 No build step, package manager, server, or external framework is required.
 
+The project intentionally avoids React, Vite, npm, Tailwind, Bootstrap, external fonts, CDNs, analytics scripts, and large libraries.
+
 ## Development Workflow
 
 1. Add research notes to `notes/research-log.md`.
@@ -43,6 +49,13 @@ No build step, package manager, server, or external framework is required.
 3. Map each future claim to a verified source in `notes/source-map.md`.
 4. Update the essay sections in `index.html`.
 5. Keep all citations and data traceable to checked sources.
+6. Test the page by opening `index.html` directly before committing changes.
+
+## GitHub Pages
+
+Placeholder deployment target: publish from the repository's default branch using GitHub Pages.
+
+After the repository is created and pushed, replace the placeholder Pages link above with the live URL.
 
 ## AI Tools Used
 
@@ -56,6 +69,17 @@ Placeholder: Verified data and sources will be added later. No invented sources 
 
 This site uses plain HTML, CSS, and JavaScript only. It is designed to work by opening `index.html` directly and to render cleanly on GitHub Pages.
 
+All important content is real HTML text rather than text embedded in images.
+
 ## Commit History Note
 
 Meaningful commits should document the staged development of the scaffold, layout, interactions, logs, and documentation.
+
+Day 1 commit sequence:
+
+1. Create initial GitHub Pages scaffold
+2. Add responsive academic essay layout
+3. Add scenario switcher interaction
+4. Add AI abundance stack interaction
+5. Add research and AI use logs
+6. Add README project documentation
