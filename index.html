@@ -51,17 +51,17 @@
       </p>
 
       <div class="button-grid" aria-label="AI abundance stack layers">
-        <button type="button">Cheap tokens</button>
-        <button type="button">Good-enough models</button>
-        <button type="button">Local compute</button>
-        <button type="button">Local data processing</button>
-        <button type="button">Energy and cooling infrastructure</button>
-        <button type="button">Natural-language agents</button>
+        <button type="button" data-stack-layer="cheap-tokens" aria-pressed="false">Cheap tokens</button>
+        <button type="button" data-stack-layer="good-enough-models" aria-pressed="false">Good-enough models</button>
+        <button type="button" data-stack-layer="local-compute" aria-pressed="false">Local compute</button>
+        <button type="button" data-stack-layer="local-data-processing" aria-pressed="false">Local data processing</button>
+        <button type="button" data-stack-layer="energy-cooling" aria-pressed="false">Energy and cooling infrastructure</button>
+        <button type="button" data-stack-layer="natural-language-agents" aria-pressed="false">Natural-language agents</button>
       </div>
 
-      <article class="info-panel" aria-labelledby="stack-panel-heading">
+      <article class="info-panel" aria-labelledby="stack-panel-heading" aria-live="polite">
         <h3 id="stack-panel-heading">Layer Explanation Placeholder</h3>
-        <p>
+        <p id="stack-panel-copy">
           Select a stack layer to later view its role in the forecast. This placeholder remains understandable if JavaScript is unavailable.
         </p>
       </article>
