@@ -88,14 +88,14 @@
       </p>
 
       <div class="scenario-controls" aria-label="Scenario options">
-        <button type="button">Baseline</button>
-        <button type="button">Upside</button>
-        <button type="button">Downside</button>
+        <button type="button" data-scenario="baseline" aria-pressed="true">Baseline</button>
+        <button type="button" data-scenario="upside" aria-pressed="false">Upside</button>
+        <button type="button" data-scenario="downside" aria-pressed="false">Downside</button>
       </div>
 
-      <article class="scenario-card" aria-labelledby="scenario-card-heading">
+      <article class="scenario-card" aria-labelledby="scenario-card-heading" aria-live="polite">
         <h3 id="scenario-card-heading">Baseline Scenario Placeholder</h3>
-        <p>
+        <p id="scenario-card-copy">
           Placeholder: The baseline scenario will be developed after evidence is collected and checked.
         </p>
       </article>
@@ -134,5 +134,6 @@
     <p>Student placeholder: Zhixian Meng, s4034214</p>
     <p>Course: ECON1626 Economics of Artificial Intelligence</p>
   </footer>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

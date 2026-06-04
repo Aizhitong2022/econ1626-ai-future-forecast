@@ -199,6 +199,13 @@ button:hover {
   background: rgba(47, 157, 143, 0.1);
 }
 
+button.is-active,
+button[aria-pressed="true"] {
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+  color: var(--paper);
+}
+
 .info-panel,
 .scenario-card {
   margin-top: 1rem;
