@@ -6,7 +6,7 @@ Course: ECON1626 Economics of Artificial Intelligence
 
 Assessment: Assessment 3 AI Future Forecast Interactive Web Essay
 
-GitHub Pages link placeholder: `https://USERNAME.github.io/econ1626-ai-future-forecast/`
+GitHub Pages link: `https://aizhitong2022.github.io/econ1626-ai-future-forecast/`
 
 ## Project Overview
 
@@ -55,7 +55,7 @@ The project intentionally avoids React, Vite, npm, Tailwind, Bootstrap, external
 
 Placeholder deployment target: publish from the repository's default branch using GitHub Pages.
 
-After the repository is created and pushed, replace the placeholder Pages link above with the live URL.
+The live GitHub Pages site is published from the `master` branch at `/`.
 
 ## AI Tools Used
 
