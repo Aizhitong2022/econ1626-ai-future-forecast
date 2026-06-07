@@ -6,6 +6,8 @@ Course: ECON1626 Economics of Artificial Intelligence
 
 Assessment: Assessment 3 AI Future Forecast Interactive Web Essay
 
+Live website: https://aizhitong2022.github.io/econ1626-ai-future-forecast/
+
 GitHub Pages link: `https://aizhitong2022.github.io/econ1626-ai-future-forecast/`
 
 ## Project Overview

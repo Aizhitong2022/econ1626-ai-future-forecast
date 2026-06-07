@@ -218,6 +218,13 @@ tbody tr:nth-child(even) {
   background: rgba(11, 23, 38, 0.035);
 }
 
+.source-note {
+  margin-top: -0.6rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 .references-list p {
   font-size: 0.96rem;
   line-height: 1.5;
