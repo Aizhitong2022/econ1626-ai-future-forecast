@@ -15,7 +15,7 @@ Initial framing areas to research later:
 - Energy and cooling infrastructure
 - Natural-language agent interfaces
 
-Next research step: collect and verify sources before converting any placeholder into a claim.
+Next research step: collect and verify sources before converting any scaffold text into a claim.
 
 ## 2026-06-07 - Final Integration Day
 
