@@ -27,9 +27,11 @@ assets/
   js/
     main.js
   data/
-    .gitkeep
+    token-pricing-milestones.csv
+    token-economy-proxies.csv
+    ai-infrastructure-australia.csv
   img/
-    .gitkeep
+    hero-rainforest-shrub.png
 notes/
   research-log.md
   ai-use-log.md
