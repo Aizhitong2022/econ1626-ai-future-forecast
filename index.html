@@ -14,8 +14,8 @@
   <header class="site-header">
     <nav class="site-nav" aria-label="Primary">
       <a href="#thesis">Thesis</a>
-      <a href="#evidence">Evidence</a>
       <a href="#timeline">Timeline</a>
+      <a href="#evidence">Evidence</a>
       <a href="#stack">AI stack</a>
       <a href="#scenarios">Scenarios</a>
       <a href="#methods">Methods</a>
@@ -48,8 +48,8 @@
         <nav>
           <a href="#thesis">Thesis</a>
           <a href="#observation">Observation</a>
-          <a href="#evidence">Evidence</a>
           <a href="#timeline">Timeline</a>
+          <a href="#evidence">Evidence</a>
           <a href="#stack">AI stack</a>
           <a href="#mechanism">Mechanism</a>
           <a href="#infrastructure">Infrastructure</a>
@@ -97,10 +97,134 @@
         economy changes when the whole stack becomes cheap enough, trusted enough and easy enough to use
         repeatedly.
       </p>
+      <p>
+        The timeline below turns this intuition into a simple scenario pathway before the essay unpacks the
+        evidence and stack behind it.
+      </p>
+    </section>
+
+    <section id="timeline" class="essay-section interactive-section" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading">Forecast Timeline: From Prompting to Micro-Automation</h2>
+      <p>
+        The key forecast question is not whether AI becomes smarter in the abstract. It is whether several
+        constraints loosen at the same time. Cheap inference raises the ceiling for experimentation, but
+        data trust, energy readiness and agent usability decide whether repeated task delegation becomes
+        normal across Australian students, freelancers, SMEs and regulated services.
+      </p>
+
+      <div class="timeline-module">
+        <div class="timeline-chart-panel">
+          <div class="timeline-chart-head">
+            <p class="panel-label">Illustrative integration index</p>
+            <p class="timeline-note">
+              This index is an illustrative scenario model, not a measured forecast. It translates the
+              essay's assumptions about affordability, trust, energy readiness and agent usability into a
+              simple visual pathway.
+            </p>
+          </div>
+
+          <svg class="timeline-chart" viewBox="0 0 640 360" role="img" aria-labelledby="timeline-chart-title timeline-chart-desc">
+            <title id="timeline-chart-title">AI integration index scenario paths, 2026 to 2030</title>
+            <desc id="timeline-chart-desc">
+              A line chart comparing three preset scenario paths with a custom path controlled by four sliders.
+            </desc>
+            <g class="chart-grid" aria-hidden="true">
+              <line x1="64" y1="288" x2="612" y2="288"></line>
+              <line x1="64" y1="225" x2="612" y2="225"></line>
+              <line x1="64" y1="162" x2="612" y2="162"></line>
+              <line x1="64" y1="99" x2="612" y2="99"></line>
+              <line x1="64" y1="36" x2="612" y2="36"></line>
+            </g>
+            <g class="chart-axis" aria-hidden="true">
+              <line x1="64" y1="36" x2="64" y2="288"></line>
+              <line x1="64" y1="288" x2="612" y2="288"></line>
+              <text x="64" y="326">2026</text>
+              <text x="201" y="326">2027</text>
+              <text x="338" y="326">2028</text>
+              <text x="475" y="326">2029</text>
+              <text x="612" y="326">2030</text>
+              <text class="y-label" x="36" y="292">0</text>
+              <text class="y-label" x="28" y="229">25</text>
+              <text class="y-label" x="28" y="166">50</text>
+              <text class="y-label" x="28" y="103">75</text>
+              <text class="y-label" x="22" y="40">100</text>
+              <text class="axis-title" x="64" y="18">AI integration index</text>
+            </g>
+            <g class="scenario-paths" aria-hidden="true">
+              <path class="scenario-line patchy-line" d="M64 242.6 L201 217.4 L338 187.2 L475 162 L612 141.8"></path>
+              <path class="scenario-line trusted-line" d="M64 237.6 L201 199.8 L338 149.4 L475 106.6 L612 76.3"></path>
+              <path class="scenario-line bottlenecked-line" d="M64 242.6 L201 225 L338 207.4 L475 192.2 L612 182.2"></path>
+            </g>
+            <path id="custom-timeline-path" class="custom-line" d="M64 242.6 L201 210.7 L338 171.6 L475 136.7 L612 106.3"></path>
+            <g id="custom-timeline-points" class="custom-points" aria-hidden="true"></g>
+          </svg>
+
+          <div class="timeline-legend" aria-label="Scenario path legend">
+            <span><i class="legend-swatch patchy-swatch"></i>Patchy Abundance</span>
+            <span><i class="legend-swatch trusted-swatch"></i>Trusted Clean AI Stack</span>
+            <span><i class="legend-swatch bottlenecked-swatch"></i>Bottlenecked Abundance</span>
+            <span><i class="legend-swatch custom-swatch"></i>Custom settings</span>
+          </div>
+
+          <p id="timeline-custom-values" class="timeline-custom-values">
+            Custom path: 18, 31, 46, 60, 72.
+          </p>
+
+          <ul class="timeline-values" aria-label="Preset scenario index values">
+            <li>Patchy Abundance: 18, 28, 40, 50, 58.</li>
+            <li>Trusted Clean AI Stack: 20, 35, 55, 72, 84.</li>
+            <li>Bottlenecked Abundance: 18, 25, 32, 38, 42.</li>
+          </ul>
+
+          <noscript>
+            <p class="timeline-note">
+              JavaScript is disabled, so the custom pathway is shown as a static default. The preset values
+              above still describe the illustrative scenario paths.
+            </p>
+          </noscript>
+        </div>
+
+        <div class="timeline-control-panel">
+          <div class="timeline-presets" aria-label="Load scenario presets">
+            <button type="button" data-timeline-preset="patchy">Patchy Abundance</button>
+            <button type="button" data-timeline-preset="trusted">Trusted Clean AI Stack</button>
+            <button type="button" data-timeline-preset="bottlenecked">Bottlenecked Abundance</button>
+          </div>
+
+          <div class="slider-group">
+            <label for="inference-affordability">Inference affordability <span id="inference-affordability-value">65</span></label>
+            <input id="inference-affordability" type="range" min="0" max="100" value="65" data-timeline-input="inferenceAffordability">
+          </div>
+          <div class="slider-group">
+            <label for="data-trust">Data trust <span id="data-trust-value">55</span></label>
+            <input id="data-trust" type="range" min="0" max="100" value="55" data-timeline-input="dataTrust">
+          </div>
+          <div class="slider-group">
+            <label for="energy-readiness">Energy readiness <span id="energy-readiness-value">50</span></label>
+            <input id="energy-readiness" type="range" min="0" max="100" value="50" data-timeline-input="energyReadiness">
+          </div>
+          <div class="slider-group">
+            <label for="agent-usability">Agent usability <span id="agent-usability-value">60</span></label>
+            <input id="agent-usability" type="range" min="0" max="100" value="60" data-timeline-input="agentUsability">
+          </div>
+
+          <article class="info-panel timeline-interpretation" aria-live="polite">
+            <p class="panel-label">Path reading</p>
+            <p id="timeline-interpretation-text">
+              At these settings, AI integration reaches approximately 72 by 2030. The path strengthens
+              when cheap inference is matched by local data trust, energy readiness and usable agents.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <p class="timeline-closing">
+        The written scenarios below interpret these paths as policy choices rather than inevitable futures.
+      </p>
     </section>
 
     <section id="evidence" class="essay-section" aria-labelledby="evidence-heading">
-      <h2 id="evidence-heading">Cheap Tokens and Token Economy Evidence</h2>
+      <h2 id="evidence-heading">Evidence Base: Cheap Inference and the Token Economy</h2>
       <p>
         The first layer is cheap tokens. The economic effect is not just lower price. It is lower marginal
         experimentation cost. When each query or agent run feels expensive, users reserve AI for high-value
@@ -222,126 +346,6 @@
       </div>
       <p class="source-note">
         Sources: OpenAI (2021, 2023a, 2026), Reuters (2026a, 2026b), and Megaport infrastructure reporting via Reuters (2026a).
-      </p>
-    </section>
-
-    <section id="timeline" class="essay-section interactive-section" aria-labelledby="timeline-heading">
-      <h2 id="timeline-heading">Forecast Timeline: How the Stack Changes the Path</h2>
-      <p>
-        The key forecast question is not whether AI becomes smarter in the abstract. It is whether several
-        constraints loosen at the same time. Cheap inference raises the ceiling for experimentation, but
-        data trust, energy readiness and agent usability decide whether repeated task delegation becomes
-        normal across Australian students, freelancers, SMEs and regulated services.
-      </p>
-
-      <div class="timeline-module">
-        <div class="timeline-chart-panel">
-          <div class="timeline-chart-head">
-            <p class="panel-label">Illustrative integration index</p>
-            <p class="timeline-note">
-              This index is an illustrative scenario model, not a measured forecast. It translates the
-              essay's assumptions about affordability, trust, energy readiness and agent usability into a
-              simple visual pathway.
-            </p>
-          </div>
-
-          <svg class="timeline-chart" viewBox="0 0 640 360" role="img" aria-labelledby="timeline-chart-title timeline-chart-desc">
-            <title id="timeline-chart-title">AI integration index scenario paths, 2026 to 2030</title>
-            <desc id="timeline-chart-desc">
-              A line chart comparing three preset scenario paths with a custom path controlled by four sliders.
-            </desc>
-            <g class="chart-grid" aria-hidden="true">
-              <line x1="64" y1="288" x2="612" y2="288"></line>
-              <line x1="64" y1="225" x2="612" y2="225"></line>
-              <line x1="64" y1="162" x2="612" y2="162"></line>
-              <line x1="64" y1="99" x2="612" y2="99"></line>
-              <line x1="64" y1="36" x2="612" y2="36"></line>
-            </g>
-            <g class="chart-axis" aria-hidden="true">
-              <line x1="64" y1="36" x2="64" y2="288"></line>
-              <line x1="64" y1="288" x2="612" y2="288"></line>
-              <text x="64" y="326">2026</text>
-              <text x="201" y="326">2027</text>
-              <text x="338" y="326">2028</text>
-              <text x="475" y="326">2029</text>
-              <text x="612" y="326">2030</text>
-              <text class="y-label" x="36" y="292">0</text>
-              <text class="y-label" x="28" y="229">25</text>
-              <text class="y-label" x="28" y="166">50</text>
-              <text class="y-label" x="28" y="103">75</text>
-              <text class="y-label" x="22" y="40">100</text>
-              <text class="axis-title" x="64" y="18">AI integration index</text>
-            </g>
-            <g class="scenario-paths" aria-hidden="true">
-              <path class="scenario-line patchy-line" d="M64 242.6 L201 217.4 L338 187.2 L475 162 L612 141.8"></path>
-              <path class="scenario-line trusted-line" d="M64 237.6 L201 199.8 L338 149.4 L475 106.6 L612 76.3"></path>
-              <path class="scenario-line bottlenecked-line" d="M64 242.6 L201 225 L338 207.4 L475 192.2 L612 182.2"></path>
-            </g>
-            <path id="custom-timeline-path" class="custom-line" d="M64 242.6 L201 210.7 L338 171.6 L475 136.7 L612 106.3"></path>
-            <g id="custom-timeline-points" class="custom-points" aria-hidden="true"></g>
-          </svg>
-
-          <div class="timeline-legend" aria-label="Scenario path legend">
-            <span><i class="legend-swatch patchy-swatch"></i>Patchy Abundance</span>
-            <span><i class="legend-swatch trusted-swatch"></i>Trusted Clean AI Stack</span>
-            <span><i class="legend-swatch bottlenecked-swatch"></i>Bottlenecked Abundance</span>
-            <span><i class="legend-swatch custom-swatch"></i>Custom settings</span>
-          </div>
-
-          <p id="timeline-custom-values" class="timeline-custom-values">
-            Custom path: 18, 31, 46, 60, 72.
-          </p>
-
-          <ul class="timeline-values" aria-label="Preset scenario index values">
-            <li>Patchy Abundance: 18, 28, 40, 50, 58.</li>
-            <li>Trusted Clean AI Stack: 20, 35, 55, 72, 84.</li>
-            <li>Bottlenecked Abundance: 18, 25, 32, 38, 42.</li>
-          </ul>
-
-          <noscript>
-            <p class="timeline-note">
-              JavaScript is disabled, so the custom pathway is shown as a static default. The preset values
-              above still describe the illustrative scenario paths.
-            </p>
-          </noscript>
-        </div>
-
-        <div class="timeline-control-panel">
-          <div class="timeline-presets" aria-label="Load scenario presets">
-            <button type="button" data-timeline-preset="patchy">Patchy Abundance</button>
-            <button type="button" data-timeline-preset="trusted">Trusted Clean AI Stack</button>
-            <button type="button" data-timeline-preset="bottlenecked">Bottlenecked Abundance</button>
-          </div>
-
-          <div class="slider-group">
-            <label for="inference-affordability">Inference affordability <span id="inference-affordability-value">65</span></label>
-            <input id="inference-affordability" type="range" min="0" max="100" value="65" data-timeline-input="inferenceAffordability">
-          </div>
-          <div class="slider-group">
-            <label for="data-trust">Data trust <span id="data-trust-value">55</span></label>
-            <input id="data-trust" type="range" min="0" max="100" value="55" data-timeline-input="dataTrust">
-          </div>
-          <div class="slider-group">
-            <label for="energy-readiness">Energy readiness <span id="energy-readiness-value">50</span></label>
-            <input id="energy-readiness" type="range" min="0" max="100" value="50" data-timeline-input="energyReadiness">
-          </div>
-          <div class="slider-group">
-            <label for="agent-usability">Agent usability <span id="agent-usability-value">60</span></label>
-            <input id="agent-usability" type="range" min="0" max="100" value="60" data-timeline-input="agentUsability">
-          </div>
-
-          <article class="info-panel timeline-interpretation" aria-live="polite">
-            <p class="panel-label">Path reading</p>
-            <p id="timeline-interpretation-text">
-              At these settings, AI integration reaches approximately 72 by 2030. The path strengthens
-              when cheap inference is matched by local data trust, energy readiness and usable agents.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <p class="timeline-closing">
-        The written scenarios below interpret these paths as policy choices rather than inevitable futures.
       </p>
     </section>
 
