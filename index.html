@@ -15,9 +15,9 @@
     <nav class="site-nav" aria-label="Primary">
       <a href="#thesis">Thesis</a>
       <a href="#timeline">Timeline</a>
+      <a href="#scenarios">Scenarios</a>
       <a href="#evidence">Evidence</a>
       <a href="#stack">AI stack</a>
-      <a href="#scenarios">Scenarios</a>
       <a href="#methods">Methods</a>
       <a href="#references">References</a>
     </nav>
@@ -49,11 +49,11 @@
           <a href="#thesis">Thesis</a>
           <a href="#observation">Observation</a>
           <a href="#timeline">Timeline</a>
+          <a href="#scenarios">Scenarios</a>
           <a href="#evidence">Evidence</a>
           <a href="#stack">AI stack</a>
           <a href="#mechanism">Mechanism</a>
           <a href="#infrastructure">Infrastructure</a>
-          <a href="#scenarios">Scenarios</a>
           <a href="#policy">Governance</a>
           <a href="#methods">Methods</a>
           <a href="#references">References</a>
@@ -221,6 +221,45 @@
       <p class="timeline-closing">
         The written scenarios below interpret these paths as policy choices rather than inevitable futures.
       </p>
+    </section>
+
+    <section id="scenarios" class="essay-section interactive-section" aria-labelledby="scenarios-heading">
+      <h2 id="scenarios-heading">Scenarios</h2>
+      <p>
+        The timeline shows the shape of possible adoption. The three scenarios below explain how policy
+        choices and infrastructure constraints could push Australia toward different paths.
+      </p>
+      <p>
+        These scenarios use the same evidence base but stress different bottlenecks. They are not
+        predictions of certainty. They are structured ways to test how pricing, infrastructure, trust and
+        workflow capability could interact by 2027-2030.
+      </p>
+
+      <div class="scenario-module">
+        <div class="scenario-controls" aria-label="Scenario options">
+          <button type="button" data-scenario="baseline" aria-pressed="true">
+            <span class="scenario-label">Baseline</span>
+            <span class="scenario-name">Patchy Abundance</span>
+          </button>
+          <button type="button" data-scenario="upside" aria-pressed="false">
+            <span class="scenario-label">Upside</span>
+            <span class="scenario-name">Trusted Clean AI Stack</span>
+          </button>
+          <button type="button" data-scenario="downside" aria-pressed="false">
+            <span class="scenario-label">Downside</span>
+            <span class="scenario-name">Bottlenecked Abundance</span>
+          </button>
+        </div>
+
+        <article class="scenario-card" aria-labelledby="scenario-card-heading" aria-live="polite">
+          <h3 id="scenario-card-heading">Patchy Abundance</h3>
+          <p id="scenario-card-copy">
+            Tokens continue to get cheaper and agent tools become easier to use. Students, freelancers,
+            software developers and SMEs adopt AI for micro-automation, but data governance, energy costs,
+            workflow redesign and verification skills lag behind model capability.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section id="evidence" class="essay-section" aria-labelledby="evidence-heading">
@@ -527,41 +566,6 @@
         <article>
           <h3>Local infrastructure</h3>
           <p>Compute, data processing and inference infrastructure shape access.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="scenarios" class="essay-section interactive-section" aria-labelledby="scenarios-heading">
-      <h2 id="scenarios-heading">Scenarios</h2>
-      <p>
-        These scenarios use the same evidence base but stress different bottlenecks. They are not
-        predictions of certainty. They are structured ways to test how pricing, infrastructure, trust and
-        workflow capability could interact by 2027-2030.
-      </p>
-
-      <div class="scenario-module">
-        <div class="scenario-controls" aria-label="Scenario options">
-          <button type="button" data-scenario="baseline" aria-pressed="true">
-            <span class="scenario-label">Baseline</span>
-            <span class="scenario-name">Patchy Abundance</span>
-          </button>
-          <button type="button" data-scenario="upside" aria-pressed="false">
-            <span class="scenario-label">Upside</span>
-            <span class="scenario-name">Trusted Clean AI Stack</span>
-          </button>
-          <button type="button" data-scenario="downside" aria-pressed="false">
-            <span class="scenario-label">Downside</span>
-            <span class="scenario-name">Bottlenecked Abundance</span>
-          </button>
-        </div>
-
-        <article class="scenario-card" aria-labelledby="scenario-card-heading" aria-live="polite">
-          <h3 id="scenario-card-heading">Patchy Abundance</h3>
-          <p id="scenario-card-copy">
-            Tokens continue to get cheaper and agent tools become easier to use. Students, freelancers,
-            software developers and SMEs adopt AI for micro-automation, but data governance, energy costs,
-            workflow redesign and verification skills lag behind model capability.
-          </p>
         </article>
       </div>
     </section>
