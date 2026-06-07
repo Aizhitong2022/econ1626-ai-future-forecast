@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The $39 AI Plan Moment: Australia's AI Abundance Stack</title>
-  <meta name="description" content="Day 1 scaffold for an ECON1626 AI Future Forecast interactive web essay.">
+  <meta name="description" content="A near-final ECON1626 AI Future Forecast interactive web essay on Australia's AI abundance stack.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
   <header class="site-header">
     <nav class="site-nav" aria-label="Primary">
       <a href="#thesis">Thesis</a>
+      <a href="#evidence">Evidence</a>
       <a href="#stack">AI stack</a>
       <a href="#scenarios">Scenarios</a>
       <a href="#methods">Methods</a>
@@ -23,31 +24,207 @@
       <p class="eyebrow">ECON1626 Assessment 3 AI Future Forecast Interactive Web Essay</p>
       <h1 id="page-title">The $39 AI Plan Moment: Australia's AI Abundance Stack</h1>
       <p class="lede">
-        A Day 1 working scaffold for a forecast about possible AI-driven economic change in Australia by 2027-2030.
-        Final argument, evidence, data, and citations will be added later.
+        A 2027-2030 forecast arguing that Australia's near-term AI shift will depend less on universal AGI
+        and more on cheap inference, usable models, local compute, trusted data processing, energy-ready
+        infrastructure and natural-language agents maturing together.
       </p>
     </section>
   </header>
 
   <main id="main-content" class="page-shell">
     <section id="thesis" class="essay-section" aria-labelledby="thesis-heading">
-      <h2 id="thesis-heading">Forecast Thesis Placeholder</h2>
+      <h2 id="thesis-heading">Forecast Thesis</h2>
       <p>
-        Placeholder: This section will state the final forecast thesis after research, source checking, and revision.
+        By 2027-2030, Australia's most important near-term AI shift will not come from universal AGI or a
+        single frontier model. It will come from an AI abundance stack: cheap inference, good-enough
+        everyday models, lower-cost local compute, trusted local data processing, energy-ready
+        infrastructure, and natural-language agents that let ordinary users delegate digital tasks
+        repeatedly.
+      </p>
+      <p>
+        When these layers mature together, AI use will move from occasional prompting to micro-automation
+        in study, freelancing, research, small business and regulated services. The gains will be real but
+        uneven. Productivity will depend on who controls compute, data, energy costs, agent permissions
+        and the workflow knowledge needed to use AI well.
       </p>
     </section>
 
     <section id="observation" class="essay-section" aria-labelledby="observation-heading">
-      <h2 id="observation-heading">Personal Observation: PC, Smartphones, Mobile Data, and AI Abundance</h2>
+      <h2 id="observation-heading">Personal Observation: From Mobile Data to AI Abundance</h2>
       <p>
-        Placeholder: This section will connect a personal technology observation to the future-facing economic forecast.
+        My starting point is a personal observation from the Chinese internet economy. Civilian PCs helped
+        create the early internet market. Smartphones made mobile applications normal. Cheap and abundant
+        mobile data then changed user behaviour again. Short video, livestreaming, mobile payment,
+        delivery platforms and real-time services did not grow only because phones became better. They
+        grew because users stopped treating data as scarce.
+      </p>
+      <p>
+        AI may need a similar moment. A model that is powerful but expensive is like mobile internet
+        before generous data plans. People try it, but they do not build everyday behaviour around it. A
+        more important threshold arrives when ordinary users can pay a predictable monthly price, run many
+        AI tasks without anxiety and trust the tool to do useful work.
+      </p>
+      <p>
+        However, AI is more complex than mobile data. A cheap token is necessary, but not sufficient. AI
+        abundance also requires usable models, local infrastructure, data trust, energy capacity and
+        interfaces simple enough for non-technical users. The forecast is not "cheap AI will change
+        everything". The forecast is that Australia's AI economy will change when the whole stack becomes
+        cheap enough, trusted enough and easy enough to use repeatedly.
       </p>
     </section>
 
-    <section id="stack" class="essay-section interactive-section" aria-labelledby="stack-heading">
-      <h2 id="stack-heading">AI Abundance Stack</h2>
+    <section id="evidence" class="essay-section" aria-labelledby="evidence-heading">
+      <h2 id="evidence-heading">Cheap Tokens and Token Economy Evidence</h2>
       <p>
-        Placeholder: This section will explain how multiple enabling conditions may mature together.
+        The first layer is cheap tokens. The economic effect is not just lower price. It is lower marginal
+        experimentation cost. When each query or agent run feels expensive, users reserve AI for high-value
+        tasks. When inference becomes cheap, users experiment on lower-value tasks such as summarising
+        emails, drafting proposals, testing code, cleaning data, comparing options, preparing applications
+        and automating small workflows. This matters because experimentation is how users discover
+        productive uses.
+      </p>
+
+      <div class="table-wrap" tabindex="0">
+        <table>
+          <caption>Table 1: Token pricing milestones: from controlled API access to developer-level orchestration</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year / milestone</th>
+              <th scope="col">Model or product signal</th>
+              <th scope="col">Price converted to 1M tokens</th>
+              <th scope="col">What it shows</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2020-2021</th>
+              <td>GPT-3 API era</td>
+              <td>Official source confirms API access; verified price not used here</td>
+              <td>LLM access began as a controlled API product because large models were expensive to run, but API access lowered the barrier for smaller organisations and developers.</td>
+            </tr>
+            <tr>
+              <th scope="row">2023</th>
+              <td>gpt-3.5-turbo</td>
+              <td>US$2 / 1M tokens</td>
+              <td>OpenAI priced it at US$0.002 per 1K tokens and said it was 10x cheaper than existing GPT-3.5 models.</td>
+            </tr>
+            <tr>
+              <th scope="row">2023</th>
+              <td>GPT-4 Turbo</td>
+              <td>US$10 / 1M input; US$30 / 1M output</td>
+              <td>OpenAI said GPT-4 Turbo was 3x cheaper for input and 2x cheaper for output than GPT-4 while expanding context to 128k.</td>
+            </tr>
+            <tr>
+              <th scope="row">2024</th>
+              <td>GPT-4o mini</td>
+              <td>US$0.15 / 1M input; US$0.60 / 1M output</td>
+              <td>Reuters reported GPT-4o mini as more than 60% cheaper than GPT-3.5 Turbo.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>GPT-5.5</td>
+              <td>US$5 / 1M input; US$30 / 1M output</td>
+              <td>A frontier/professional model remains expensive for heavy output, but input costs are far below early high-end GPT-4 pricing.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>GPT-5.4 mini</td>
+              <td>US$0.75 / 1M input; US$4.50 / 1M output</td>
+              <td>OpenAI's pricing separates high-capability models from cheaper everyday models, supporting model routing by task value.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>DeepSeek-V4-Flash</td>
+              <td>US$0.14 / 1M input cache miss; US$0.28 / 1M output</td>
+              <td>DeepSeek shows the aggressive low-price frontier. This is a market signal, not proof that all high-quality AI is this cheap.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap" tabindex="0">
+        <table>
+          <caption>Table 2: Token economy proxy indicators: price, scale, infrastructure and cost discipline</caption>
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col">Token economy proxy</th>
+              <th scope="col">Evidence value for the essay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2021</th>
+              <td>OpenAI API removed its waitlist and opened access to developers in supported countries.</td>
+              <td>Token-based LLM access moved from closed beta toward broader developer experimentation.</td>
+            </tr>
+            <tr>
+              <th scope="row">2023</th>
+              <td>gpt-3.5-turbo reached US$2 per 1M tokens, and OpenAI said dedicated instances made sense for users above roughly 450M tokens/day.</td>
+              <td>Token demand was already large enough for industrial-scale API deployment, but prices also enabled smaller developers to experiment.</td>
+            </tr>
+            <tr>
+              <th scope="row">2024</th>
+              <td>GPT-4o mini launched at US$0.15 input and US$0.60 output per 1M tokens.</td>
+              <td>Low-cost high-capability models made API use less like rare enterprise experimentation and more like routine software infrastructure.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>OpenAI's GPT-5.5 and GPT-5.4 mini pricing shows clear model price segmentation.</td>
+              <td>Developers can route high-value tasks to frontier models and ordinary tasks to cheaper models.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>Research and industry commentary warn that agentic workflows can consume many more tokens than simple chat.</td>
+              <td>Cheap listed tokens do not automatically mean cheap agents; cost governance becomes part of the economic mechanism.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>Reuters reports corporate concern about volatile AI bills and token-heavy workflows.</td>
+              <td>This supports the downside scenario: token abundance can create cost shocks if workflows are not governed.</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>Australia's Megaport announced A$458.9m AI infrastructure contracts and a planned A$827.3m raise for distributed AI inference cloud.</td>
+              <td>Token demand is becoming physical infrastructure: GPUs, network, storage and inference capacity.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="stack" class="essay-section interactive-section" aria-labelledby="stack-heading">
+      <h2 id="stack-heading">The AI Abundance Stack</h2>
+      <p>
+        The second layer is good-enough everyday AI. Ordinary users do not always need the best model. They
+        need a model that is reliable enough for common tasks and cheap enough to use often. OpenAI's
+        pricing structure separates expensive frontier models from cheaper mini models, while DeepSeek
+        shows a more aggressive low-price frontier (OpenAI 2026; DeepSeek 2026).
+      </p>
+      <p>
+        The third layer is local compute. NVIDIA's DGX Spark should not be read as a sign that every student
+        will own a personal supercomputer. Its importance is different: high-performance local AI
+        development is moving downward toward individual researchers, small labs, startups and advanced
+        developers (NVIDIA 2026). Local compute will not replace cloud AI, but it can lower the cost of
+        prototyping, privacy-sensitive workflows and small-scale fine-tuning.
+      </p>
+      <p>
+        The fourth layer is trusted local data processing. For banking, healthcare, government and
+        education, adoption is not only about model price. It is also about where data is processed and who
+        is responsible for it. Anthropic's Sydney office and AWS Bedrock's Australia Cross-Region Inference
+        show that local data processing is becoming an adoption condition (Anthropic 2026; AWS 2025).
+      </p>
+      <p>
+        The fifth layer is energy and cooling infrastructure. AEMO and Oxford Economics Australia estimate
+        that Australian data centres used about 3.9 TWh of electricity in FY25, with a Step Change scenario
+        rising to 12.0 TWh by FY30 and 34.5 TWh by FY50 (AEMO and Oxford Economics Australia 2025). AI
+        abundance is therefore not simply a subscription plan. It is an infrastructure transition.
+      </p>
+      <p>
+        The sixth layer is natural-language agents. Tools such as Codex show the direction: a user can ask an
+        agent to write features, fix bugs, answer codebase questions, run tests and propose changes (OpenAI
+        2025). The scarce skill shifts from knowing every command to knowing what to ask, how to verify the
+        output and when not to delegate.
       </p>
 
       <div class="button-grid" aria-label="AI abundance stack layers">
@@ -60,9 +237,9 @@
       </div>
 
       <article class="info-panel" aria-labelledby="stack-panel-heading" aria-live="polite">
-        <h3 id="stack-panel-heading">Layer Explanation Placeholder</h3>
+        <h3 id="stack-panel-heading">Select a Stack Layer</h3>
         <p id="stack-panel-copy">
-          Select a stack layer to later view its role in the forecast. This placeholder remains understandable if JavaScript is unavailable.
+          Use the layer buttons to focus on one part of the AI abundance stack.
         </p>
       </article>
     </section>
@@ -70,21 +247,63 @@
     <section id="mechanism" class="essay-section" aria-labelledby="mechanism-heading">
       <h2 id="mechanism-heading">Economic Mechanism</h2>
       <p>
-        Placeholder: This section will describe the economic mechanism linking AI capability, cost, adoption, productivity, and distributional effects.
+        The economic mechanism is best understood through general-purpose technology theory. General-purpose
+        technologies spread across many sectors, improve over time and create complementary innovations
+        (Bresnahan and Trajtenberg 1995). AI fits this pattern, but GPTs rarely produce their full
+        productivity effects immediately. Brynjolfsson, Rock and Syverson (2017) describe a modern
+        productivity paradox: powerful technology can arrive before firms have redesigned processes,
+        skills, incentives and intangible capital.
+      </p>
+      <p>
+        The labour market effect is not simple job replacement. Acemoglu and Restrepo's task framework
+        shows that automation shifts some tasks from labour to capital, creating a displacement effect,
+        while new tasks can create a reinstatement effect (Acemoglu and Restrepo 2019). AI abundance will
+        automate some routine cognitive tasks, but it will also reinstate tasks around AI verification,
+        workflow design, prompt configuration, domain judgement, client trust, compliance and
+        accountability.
+      </p>
+      <p>
+        This explains why productivity gains may not automatically become higher wages. AI is
+        institutionally capital, even when it performs labour-like cognitive services. Returns may flow to
+        model providers, cloud platforms, hardware suppliers, data centre operators, firms that redesign
+        workflows and workers who privately capture productivity gains. Workers benefit most when they
+        control workflow knowledge and when their tasks are complemented rather than substituted.
+      </p>
+      <p>
+        Empirical evidence supports this mixed view. Brynjolfsson, Li and Raymond found that generative AI
+        increased customer support productivity by about 15%, with the largest gains for less experienced
+        workers (Brynjolfsson, Li and Raymond 2023). Dell'Acqua et al. found a jagged frontier: consultants
+        using AI performed much better inside the AI capability frontier, but worse on tasks requiring
+        deeper contextual judgement outside it (Dell'Acqua et al. 2023).
       </p>
     </section>
 
     <section id="infrastructure" class="essay-section" aria-labelledby="infrastructure-heading">
       <h2 id="infrastructure-heading">Australia Infrastructure</h2>
       <p>
-        Placeholder: This section will discuss local infrastructure conditions relevant to the forecast, supported by verified sources later.
+        Australia is a useful forecast case because it is a high-wage, service-heavy economy with strong
+        regulatory concern about data, energy and trust. The National AI Centre's AI Adoption Tracker
+        focuses on how Australian SMEs understand and use AI (National AI Centre 2026). Jobs and Skills
+        Australia's national study argues that GenAI is more likely to augment work than fully replace it,
+        while reshaping routine tasks and skills demand (Jobs and Skills Australia 2025).
+      </p>
+      <p>
+        The local infrastructure question is now explicit policy. The Australian Government's expectations
+        for data centres and AI infrastructure developers connect AI investment to national security, data
+        sovereignty, energy prices, clean generation, storage, demand flexibility, water use and social
+        licence (Department of Industry, Science and Resources 2026). If local data processing, affordable
+        inference and local compute improve together, Australian SMEs, researchers and freelancers could
+        gain access to capabilities that previously belonged to large firms. If energy, compliance and
+        platform costs remain bottlenecks, abundance will be uneven.
       </p>
     </section>
 
     <section id="scenarios" class="essay-section interactive-section" aria-labelledby="scenarios-heading">
-      <h2 id="scenarios-heading">Scenario Switcher</h2>
+      <h2 id="scenarios-heading">Scenarios</h2>
       <p>
-        Placeholder: This interaction will compare three possible forecast pathways without presenting final claims yet.
+        These scenarios use the same evidence base but stress different bottlenecks. They are not
+        predictions of certainty. They are structured ways to test how pricing, infrastructure, trust and
+        workflow capability could interact by 2027-2030.
       </p>
 
       <div class="scenario-controls" aria-label="Scenario options">
@@ -94,9 +313,11 @@
       </div>
 
       <article class="scenario-card" aria-labelledby="scenario-card-heading" aria-live="polite">
-        <h3 id="scenario-card-heading">Baseline Scenario Placeholder</h3>
+        <h3 id="scenario-card-heading">Patchy Abundance</h3>
         <p id="scenario-card-copy">
-          Placeholder: The baseline scenario will be developed after evidence is collected and checked.
+          Tokens continue to get cheaper and agent tools become easier to use. Students, freelancers,
+          software developers and SMEs adopt AI for micro-automation, but data governance, energy costs,
+          workflow redesign and verification skills lag behind model capability.
         </p>
       </article>
     </section>
@@ -104,34 +325,84 @@
     <section id="policy" class="essay-section" aria-labelledby="policy-heading">
       <h2 id="policy-heading">Policy and Governance Trade-offs</h2>
       <p>
-        Placeholder: This section will evaluate trade-offs such as productivity, privacy, energy use, competition, skills, and institutional trust.
+        The policy challenge is to encourage useful AI diffusion without ignoring infrastructure costs and
+        social risk. If regulation is too heavy, compliance costs may favour incumbents and slow
+        experimentation by startups and SMEs. If regulation is too light, data privacy, workplace
+        surveillance, energy pressure and market concentration may undermine trust.
+      </p>
+      <p>
+        The most useful governance approach is targeted. Data residency and security matter most for
+        regulated sectors. Energy and cooling expectations matter most for large data centres. AI literacy
+        matters for SMEs and students. Agent governance matters when systems can access files, payments,
+        codebases, emails or customer records. The principle should be simple: let low-risk experimentation
+        remain cheap, but require stronger accountability when AI systems act on behalf of users or process
+        sensitive data.
       </p>
     </section>
 
     <section id="methods" class="essay-section" aria-labelledby="methods-heading">
       <h2 id="methods-heading">Methods and Assumptions</h2>
       <p>
-        Placeholder: This section will explain the forecasting method, assumptions, uncertainty, and evidence limits.
+        This forecast uses a 2027-2030 time horizon because it is near enough to connect to current evidence
+        but far enough for infrastructure, pricing and organisational change to matter. The method combines
+        official Australian policy sources, academic economics literature, company documentation and timely
+        market news.
+      </p>
+      <p>
+        The forecast does not assume AGI. It assumes that many ordinary digital tasks will become cheap
+        enough to delegate, while high-stakes tasks still require human judgement and institutional rules.
+        It also assumes that token prices alone are an incomplete measure of cost. Agentic workflows can
+        consume many more tokens than chat, and real costs depend on model routing, context length,
+        reasoning tokens, retries, verification and error correction.
+      </p>
+      <p>
+        The main limitation is that no standard annual "token market size" dataset exists. Therefore, this
+        essay uses proxy indicators: API prices, developer access, AI infrastructure contracts,
+        token-consumption research and official data centre energy forecasts.
       </p>
     </section>
 
     <section id="ai-use" class="essay-section" aria-labelledby="ai-use-heading">
       <h2 id="ai-use-heading">AI Use Statement</h2>
       <p>
-        Placeholder: This section will transparently describe how AI tools were used and how all outputs were verified by the student.
+        AI tools were used to brainstorm the topic, compare possible forecast structures, identify relevant
+        economic mechanisms, draft and revise text, and support the HTML/CSS/JavaScript website scaffold.
+        AI outputs were not treated as sources. Claims were checked against official documents, academic
+        literature, company documentation or reputable news sources before inclusion. The final topic
+        framing, source selection, argument structure and submission decisions were reviewed and approved
+        by the student.
       </p>
     </section>
 
-    <section id="references" class="essay-section" aria-labelledby="references-heading">
-      <h2 id="references-heading">References Placeholder</h2>
-      <p>
-        Placeholder: Verified references will be added here later. No fake citations are included in this Day 1 scaffold.
-      </p>
+    <section id="references" class="essay-section references-list" aria-labelledby="references-heading">
+      <h2 id="references-heading">References</h2>
+      <p>Acemoglu, D. and Restrepo, P. (2019) 'Automation and new tasks: how technology displaces and reinstates labor', <cite>Journal of Economic Perspectives</cite>, 33(2), pp. 3-30.</p>
+      <p>AEMO and Oxford Economics Australia (2025) <cite>Data centre energy consumption report</cite>. Available at: https://www.aemo.com.au/ (Accessed: 7 June 2026).</p>
+      <p>Anthropic (2026) <cite>Sydney will become Anthropic's fourth office in Asia-Pacific</cite>. Available at: https://www.anthropic.com/news/sydney-fourth-office-asia-pacific (Accessed: 7 June 2026).</p>
+      <p>AWS (2025) <cite>Introducing Amazon Bedrock Cross-Region Inference for Claude in Japan and Australia</cite>. Available at: https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-cross-region-inference-for-claude-sonnet-4-5-and-haiku-4-5-in-japan-and-australia/ (Accessed: 7 June 2026).</p>
+      <p>Bresnahan, T.F. and Trajtenberg, M. (1995) 'General purpose technologies: engines of growth?', <cite>Journal of Econometrics</cite>, 65(1), pp. 83-108.</p>
+      <p>Brynjolfsson, E., Li, D. and Raymond, L.R. (2023) <cite>Generative AI at work</cite>. NBER Working Paper.</p>
+      <p>Brynjolfsson, E., Rock, D. and Syverson, C. (2017) <cite>Artificial intelligence and the modern productivity paradox</cite>. NBER Working Paper.</p>
+      <p>DeepSeek (2026) <cite>Models and pricing documentation</cite>. Available at: https://api-docs.deepseek.com/quick_start/pricing (Accessed: 7 June 2026).</p>
+      <p>Dell'Acqua, F. et al. (2023) <cite>Navigating the jagged technological frontier: field experimental evidence of the effects of AI on knowledge worker productivity and quality</cite>.</p>
+      <p>Department of Industry, Science and Resources (2026) <cite>Expectations of data centres and AI infrastructure developers</cite>. Available at: https://www.industry.gov.au/publications/expectations-data-centres-and-ai-infrastructure-developers (Accessed: 7 June 2026).</p>
+      <p>Jobs and Skills Australia (2025) <cite>Our Gen AI Transition</cite>. Available at: https://www.jobsandskills.gov.au/publications/our-gen-ai-transition-final-release (Accessed: 7 June 2026).</p>
+      <p>National AI Centre (2026) <cite>AI Adoption Tracker</cite>. Available at: https://www.ai.gov.au/news-and-insights/reports/ai-adoption-tracker (Accessed: 7 June 2026).</p>
+      <p>NVIDIA (2026) <cite>NVIDIA DGX Spark product documentation</cite>. Available at: https://www.nvidia.com/en-us/products/workstations/dgx-spark/ (Accessed: 7 June 2026).</p>
+      <p>OpenAI (2020) <cite>OpenAI API</cite>. Available at: https://openai.com/blog/openai-api/ (Accessed: 7 June 2026).</p>
+      <p>OpenAI (2021) <cite>OpenAI's API now available with no waitlist</cite>. Available at: https://openai.com/blog/api-no-waitlist/ (Accessed: 7 June 2026).</p>
+      <p>OpenAI (2023a) <cite>Introducing ChatGPT and Whisper APIs</cite>. Available at: https://openai.com/index/introducing-chatgpt-and-whisper-apis/ (Accessed: 7 June 2026).</p>
+      <p>OpenAI (2023b) <cite>New models and developer products announced at DevDay</cite>. Available at: https://openai.com/index/new-models-and-developer-products-announced-at-devday/ (Accessed: 7 June 2026).</p>
+      <p>OpenAI (2025) <cite>Introducing Codex</cite>. Available at: https://openai.com/index/introducing-codex/ (Accessed: 7 June 2026).</p>
+      <p>OpenAI (2026) <cite>API pricing</cite>. Available at: https://platform.openai.com/docs/pricing (Accessed: 7 June 2026).</p>
+      <p>Reuters (2024) 'OpenAI unveils cheaper small AI model GPT-4o mini'.</p>
+      <p>Reuters (2026a) 'Australia's Megaport secures new AI infrastructure contracts'.</p>
+      <p>Reuters (2026b) 'Corporate AI sticker shock will force restraint'.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Student placeholder: Zhixian Meng, s4034214</p>
+    <p>Student: Zhixian Meng, s4034214</p>
     <p>Course: ECON1626 Economics of Artificial Intelligence</p>
   </footer>
   <script src="assets/js/main.js" defer></script>
