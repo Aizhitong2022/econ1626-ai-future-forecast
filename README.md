@@ -14,7 +14,7 @@ GitHub Pages link: `https://aizhitong2022.github.io/econ1626-ai-future-forecast/
 
 This repository contains a working draft / near-final interactive web essay about a possible AI future forecast for Australia's economy by 2027-2030.
 
-The project began as a Day 1 GitHub Pages scaffold and has now been developed into a structured static website with essay sections, evidence tables, references, scenario interaction, and an AI abundance stack interaction.
+The project began as a Day 1 GitHub Pages scaffold and has now been developed into a structured static website with essay sections, evidence tables, references, an interactive illustrative forecast timeline, scenario interaction, and an AI abundance stack interaction.
 
 ## File Structure
 

@@ -39,6 +39,7 @@ a {
 
 a:focus-visible,
 button:focus-visible,
+input:focus-visible,
 .table-wrap:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
@@ -374,6 +375,242 @@ tbody tr:nth-child(even) {
   text-align: left;
 }
 
+.timeline-module {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+  gap: 1.25rem;
+  margin-top: 1.65rem;
+}
+
+.timeline-chart-panel,
+.timeline-control-panel {
+  min-width: 0;
+  border: 1px solid rgba(47, 143, 114, 0.22);
+  border-radius: 0.7rem;
+  background: rgba(255, 253, 247, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.timeline-chart-panel {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.timeline-chart-head {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-note,
+.timeline-closing {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.timeline-note {
+  max-width: 78ch;
+  margin: 0;
+}
+
+.timeline-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.55rem;
+  overflow: visible;
+}
+
+.chart-grid line {
+  stroke: rgba(25, 57, 46, 0.12);
+  stroke-width: 1;
+}
+
+.chart-axis line {
+  stroke: rgba(25, 57, 46, 0.42);
+  stroke-width: 1.2;
+}
+
+.chart-axis text {
+  fill: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 720;
+  text-anchor: middle;
+}
+
+.chart-axis .y-label {
+  text-anchor: end;
+}
+
+.chart-axis .axis-title {
+  fill: var(--forest-soft);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-anchor: start;
+}
+
+.scenario-line,
+.custom-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.scenario-line {
+  stroke-width: 2;
+  opacity: 0.52;
+}
+
+.patchy-line {
+  stroke: #758b84;
+}
+
+.trusted-line {
+  stroke: var(--accent);
+}
+
+.bottlenecked-line {
+  stroke: #9a7f66;
+}
+
+.custom-line {
+  stroke: var(--forest-soft);
+  stroke-width: 3.2;
+}
+
+.custom-points circle {
+  fill: var(--paper-strong);
+  stroke: var(--forest-soft);
+  stroke-width: 2.2;
+}
+
+.timeline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.85rem;
+  margin-top: 0.8rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
+.timeline-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.16rem;
+  border-radius: 999px;
+  background: var(--forest-soft);
+}
+
+.patchy-swatch {
+  background: #758b84;
+}
+
+.trusted-swatch {
+  background: var(--accent);
+}
+
+.bottlenecked-swatch {
+  background: #9a7f66;
+}
+
+.custom-swatch {
+  height: 0.22rem;
+  background: var(--forest-soft);
+}
+
+.timeline-values {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.85rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.timeline-custom-values {
+  margin: 0.75rem 0 0;
+  color: var(--forest-soft);
+  font-size: 0.84rem;
+  font-weight: 780;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.timeline-control-panel {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.timeline-presets {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.timeline-presets button {
+  min-height: 2.6rem;
+  text-align: left;
+}
+
+.slider-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.slider-group label {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  justify-content: space-between;
+  color: var(--forest);
+  font-size: 0.9rem;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+.slider-group label span {
+  min-width: 2.2rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.slider-group input {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.timeline-interpretation {
+  margin-top: 0.2rem;
+  padding: 1.05rem;
+}
+
+.timeline-interpretation p:last-child {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.timeline-closing {
+  margin-top: 1rem;
+}
+
+.essay-section > .timeline-closing {
+  text-align: left;
+}
+
 .references-list p {
   font-size: 0.96rem;
   line-height: 1.5;
@@ -692,6 +929,7 @@ button[aria-pressed="true"] {
   .hero-signals,
   .stack-module,
   .scenario-module,
+  .timeline-module,
   .signals-grid {
     grid-template-columns: 1fr;
   }
@@ -759,6 +997,24 @@ button[aria-pressed="true"] {
 
   .essay-section {
     padding: 1.35rem;
+  }
+
+  .timeline-chart-panel,
+  .timeline-control-panel {
+    padding: 1rem;
+  }
+
+  .timeline-legend {
+    gap: 0.45rem 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .timeline-values {
+    font-size: 0.78rem;
+  }
+
+  .slider-group label {
+    align-items: flex-start;
   }
 
   .stack-module {

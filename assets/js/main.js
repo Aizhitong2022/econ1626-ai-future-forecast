@@ -40,6 +40,41 @@ const stackLayerContent = {
   }
 };
 
+const timelineDefaults = {
+  inferenceAffordability: 65,
+  dataTrust: 55,
+  energyReadiness: 50,
+  agentUsability: 60
+};
+
+const timelinePresets = {
+  patchy: {
+    inferenceAffordability: 50,
+    dataTrust: 35,
+    energyReadiness: 30,
+    agentUsability: 35
+  },
+  trusted: {
+    inferenceAffordability: 78,
+    dataTrust: 76,
+    energyReadiness: 75,
+    agentUsability: 74
+  },
+  bottlenecked: {
+    inferenceAffordability: 24,
+    dataTrust: 12,
+    energyReadiness: 10,
+    agentUsability: 8
+  }
+};
+
+const timelineLabels = {
+  inferenceAffordability: "inference affordability",
+  dataTrust: "data trust",
+  energyReadiness: "energy readiness",
+  agentUsability: "agent usability"
+};
+
 function setupScenarioSwitcher() {
   const buttons = document.querySelectorAll("[data-scenario]");
   const heading = document.querySelector("#scenario-card-heading");
@@ -112,6 +147,160 @@ function setupStackLayerInteraction() {
   });
 }
 
+function setupForecastTimeline() {
+  const inputs = Array.from(document.querySelectorAll("[data-timeline-input]"));
+  const path = document.querySelector("#custom-timeline-path");
+  const pointsGroup = document.querySelector("#custom-timeline-points");
+  const interpretation = document.querySelector("#timeline-interpretation-text");
+  const customValuesText = document.querySelector("#timeline-custom-values");
+  const presetButtons = Array.from(document.querySelectorAll("[data-timeline-preset]"));
+
+  if (!inputs.length || !path || !pointsGroup || !interpretation) {
+    return;
+  }
+
+  const chart = {
+    left: 64,
+    right: 612,
+    top: 36,
+    bottom: 288
+  };
+  const years = [2026, 2027, 2028, 2029, 2030];
+
+  function clamp(value) {
+    return Math.min(100, Math.max(0, value));
+  }
+
+  function pointFor(value, index) {
+    const xStep = (chart.right - chart.left) / (years.length - 1);
+    const x = chart.left + xStep * index;
+    const y = chart.bottom - (clamp(value) / 100) * (chart.bottom - chart.top);
+
+    return { x, y };
+  }
+
+  function valuesToPath(values) {
+    return values
+      .map((value, index) => {
+        const point = pointFor(value, index);
+        const command = index === 0 ? "M" : "L";
+        return `${command}${point.x.toFixed(1)} ${point.y.toFixed(1)}`;
+      })
+      .join(" ");
+  }
+
+  function readSettings() {
+    return inputs.reduce((settings, input) => {
+      settings[input.dataset.timelineInput] = Number(input.value);
+      return settings;
+    }, { ...timelineDefaults });
+  }
+
+  function scoreSettings(settings) {
+    return (
+      0.3 * settings.inferenceAffordability +
+      0.25 * settings.dataTrust +
+      0.25 * settings.energyReadiness +
+      0.2 * settings.agentUsability
+    );
+  }
+
+  function buildCustomValues(settings) {
+    const score = scoreSettings(settings);
+
+    return [
+      18,
+      22 + score * 0.15,
+      26 + score * 0.35,
+      30 + score * 0.52,
+      34 + score * 0.66
+    ].map((value) => Math.round(clamp(value)));
+  }
+
+  function updateOutputs(settings) {
+    inputs.forEach((input) => {
+      const output = document.querySelector(`#${input.id}-value`);
+
+      if (output) {
+        output.textContent = String(settings[input.dataset.timelineInput]);
+      }
+    });
+  }
+
+  function updatePoints(values) {
+    pointsGroup.replaceChildren();
+
+    values.forEach((value, index) => {
+      const point = pointFor(value, index);
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", point.x.toFixed(1));
+      circle.setAttribute("cy", point.y.toFixed(1));
+      circle.setAttribute("r", "4.5");
+      circle.setAttribute("aria-label", `${years[index]} custom index ${value}`);
+      pointsGroup.appendChild(circle);
+    });
+  }
+
+  function updateInterpretation(settings, values) {
+    const weakestKey = Object.keys(settings).reduce((weakest, key) => {
+      return settings[key] < settings[weakest] ? key : weakest;
+    }, "inferenceAffordability");
+    const value2030 = values[values.length - 1];
+    const pathTone = value2030 >= 70 ? "coordinated" : "patchy";
+
+    interpretation.textContent = `At these settings, AI integration reaches approximately ${value2030} by 2030. The path is strongest when cheap inference is matched by local data trust, energy readiness and usable agents; with ${timelineLabels[weakestKey]} as the weakest setting, adoption remains ${pathTone} rather than automatic.`;
+  }
+
+  function setActivePreset(activePreset) {
+    presetButtons.forEach((button) => {
+      const isActive = button.dataset.timelinePreset === activePreset;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function updateTimeline(activePreset = "") {
+    const settings = readSettings();
+    const values = buildCustomValues(settings);
+
+    path.setAttribute("d", valuesToPath(values));
+    updatePoints(values);
+    if (customValuesText) {
+      customValuesText.textContent = `Custom path: ${values.join(", ")}.`;
+    }
+    updateOutputs(settings);
+    updateInterpretation(settings, values);
+    setActivePreset(activePreset);
+  }
+
+  inputs.forEach((input) => {
+    input.addEventListener("input", () => updateTimeline());
+  });
+
+  presetButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", "false");
+    button.addEventListener("click", () => {
+      const preset = timelinePresets[button.dataset.timelinePreset];
+
+      if (!preset) {
+        return;
+      }
+
+      inputs.forEach((input) => {
+        const value = preset[input.dataset.timelineInput];
+
+        if (typeof value === "number") {
+          input.value = String(value);
+        }
+      });
+
+      updateTimeline(button.dataset.timelinePreset);
+    });
+  });
+
+  updateTimeline();
+}
+
 function setupSideToc() {
   const tocLinks = document.querySelectorAll(".side-toc a");
 
@@ -179,6 +368,7 @@ function setupSideToc() {
 
 document.addEventListener("DOMContentLoaded", () => {
   setupScenarioSwitcher();
+  setupForecastTimeline();
   setupStackLayerInteraction();
   setupSideToc();
 });
