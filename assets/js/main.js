@@ -1,42 +1,42 @@
 const scenarioContent = {
   baseline: {
-    heading: "Baseline Scenario Placeholder",
-    copy: "Placeholder: The baseline scenario will be developed after evidence is collected and checked."
+    heading: "Patchy Abundance",
+    copy: "Tokens continue to get cheaper and agent tools become easier to use. Students, freelancers, software developers and SMEs adopt AI for micro-automation, but data governance, energy costs, workflow redesign and verification skills lag behind model capability."
   },
   upside: {
-    heading: "Upside Scenario Placeholder",
-    copy: "Placeholder: The upside scenario will describe a more favourable pathway after research has been verified."
+    heading: "Trusted Clean AI Stack",
+    copy: "Australia expands local AI infrastructure while keeping energy costs, water use and data security under control. Local processing reduces adoption friction for regulated sectors, and SMEs gain better AI literacy support."
   },
   downside: {
-    heading: "Downside Scenario Placeholder",
-    copy: "Placeholder: The downside scenario will describe a more constrained pathway after research has been verified."
+    heading: "Bottlenecked Abundance",
+    copy: "Listed token prices fall, but real agent costs rise because complex workflows consume many input, output and reasoning tokens. Energy constraints, data centre resistance and platform concentration limit broad access."
   }
 };
 
 const stackLayerContent = {
   "cheap-tokens": {
-    heading: "Cheap Tokens Placeholder",
-    copy: "Placeholder: This layer will later explain why lower inference costs may matter for everyday AI use."
+    heading: "Cheap Tokens",
+    copy: "Lower inference prices reduce marginal experimentation cost, making it easier for ordinary users to test small AI tasks repeatedly."
   },
   "good-enough-models": {
-    heading: "Good-enough Models Placeholder",
-    copy: "Placeholder: This layer will later explain how capable everyday models may affect adoption and task design."
+    heading: "Good-enough Models",
+    copy: "Everyday models do not need to be the strongest frontier systems; they need to be reliable enough and cheap enough for common work."
   },
   "local-compute": {
-    heading: "Local Compute Placeholder",
-    copy: "Placeholder: This layer will later examine the role of lower-cost compute located closer to Australian users and institutions."
+    heading: "Local Compute",
+    copy: "Lower-cost local compute can support prototyping, privacy-sensitive workflows and small-team experimentation alongside cloud AI."
   },
   "local-data-processing": {
-    heading: "Local Data Processing Placeholder",
-    copy: "Placeholder: This layer will later consider trust, privacy, latency, and compliance questions around local data handling."
+    heading: "Local Data Processing",
+    copy: "Keeping sensitive data within trusted Australian processing arrangements can reduce adoption friction in regulated sectors."
   },
   "energy-cooling": {
-    heading: "Energy and Cooling Infrastructure Placeholder",
-    copy: "Placeholder: This layer will later connect AI adoption to verified infrastructure constraints and opportunities."
+    heading: "Energy and Cooling Infrastructure",
+    copy: "AI abundance depends on electricity, cooling, water, storage and grid connection, not software pricing alone."
   },
   "natural-language-agents": {
-    heading: "Natural-language Agents Placeholder",
-    copy: "Placeholder: This layer will later explain how natural-language interfaces may change access to digital work."
+    heading: "Natural-language Agents",
+    copy: "Agent interfaces lower the command barrier by letting users delegate tasks in plain language while still requiring verification."
   }
 };
 
