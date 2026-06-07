@@ -21,13 +21,21 @@
     </nav>
 
     <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">ECON1626 Assessment 3 AI Future Forecast Interactive Web Essay</p>
-      <h1 id="page-title">The $39 AI Plan Moment: Australia's AI Abundance Stack</h1>
-      <p class="lede">
-        A 2027-2030 forecast arguing that Australia's near-term AI shift will depend less on universal AGI
-        and more on cheap inference, usable models, local compute, trusted data processing, energy-ready
-        infrastructure and natural-language agents maturing together.
-      </p>
+      <div class="hero-content">
+        <p class="eyebrow">ECON1626 Assessment 3 AI Future Forecast Interactive Web Essay</p>
+        <h1 id="page-title">The $39 AI Plan Moment: Australia's AI Abundance Stack</h1>
+        <p class="lede">
+          A 2027-2030 forecast arguing that Australia's near-term AI shift will depend less on universal AGI
+          and more on cheap inference, usable models, local compute, trusted data processing, energy-ready
+          infrastructure and natural-language agents maturing together.
+        </p>
+        <div class="hero-signals" aria-label="Report signals">
+          <p><span>Signal 01</span>Cheap inference is changing developer access</p>
+          <p><span>Signal 02</span>Australian data centres used 3.9 TWh in FY25</p>
+          <p><span>Signal 03</span>AI abundance depends on trust, energy and workflow design</p>
+        </div>
+        <a class="scroll-cue" href="#thesis">Scroll to report</a>
+      </div>
     </section>
   </header>
 
@@ -233,21 +241,23 @@
         output and when not to delegate.
       </p>
 
-      <div class="button-grid" aria-label="AI abundance stack layers">
-        <button type="button" data-stack-layer="cheap-tokens" aria-pressed="false">Cheap tokens</button>
-        <button type="button" data-stack-layer="good-enough-models" aria-pressed="false">Good-enough models</button>
-        <button type="button" data-stack-layer="local-compute" aria-pressed="false">Local compute</button>
-        <button type="button" data-stack-layer="local-data-processing" aria-pressed="false">Local data processing</button>
-        <button type="button" data-stack-layer="energy-cooling" aria-pressed="false">Energy and cooling infrastructure</button>
-        <button type="button" data-stack-layer="natural-language-agents" aria-pressed="false">Natural-language agents</button>
-      </div>
+      <div class="stack-module">
+        <div class="button-grid stack-layers" aria-label="AI abundance stack layers">
+          <button type="button" data-stack-layer="cheap-tokens" aria-pressed="false">Cheap tokens</button>
+          <button type="button" data-stack-layer="good-enough-models" aria-pressed="false">Good-enough models</button>
+          <button type="button" data-stack-layer="local-compute" aria-pressed="false">Local compute</button>
+          <button type="button" data-stack-layer="local-data-processing" aria-pressed="false">Local data processing</button>
+          <button type="button" data-stack-layer="energy-cooling" aria-pressed="false">Energy and cooling infrastructure</button>
+          <button type="button" data-stack-layer="natural-language-agents" aria-pressed="false">Natural-language agents</button>
+        </div>
 
-      <article class="info-panel" aria-labelledby="stack-panel-heading" aria-live="polite">
-        <h3 id="stack-panel-heading">Select a Stack Layer</h3>
-        <p id="stack-panel-copy">
-          Use the layer buttons to focus on one part of the AI abundance stack.
-        </p>
-      </article>
+        <article class="info-panel stack-panel" aria-labelledby="stack-panel-heading" aria-live="polite">
+          <h3 id="stack-panel-heading">Select a Stack Layer</h3>
+          <p id="stack-panel-copy">
+            Use the layer buttons to focus on one part of the AI abundance stack.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section id="mechanism" class="essay-section" aria-labelledby="mechanism-heading">
@@ -260,6 +270,14 @@
         productivity paradox: powerful technology can arrive before firms have redesigned processes,
         skills, incentives and intangible capital.
       </p>
+      <ol class="causal-chain" aria-label="Economic mechanism causal chain">
+        <li>Cheap inference</li>
+        <li>Lower experimentation cost</li>
+        <li>More task delegation</li>
+        <li>Workflow redesign</li>
+        <li>Uneven productivity gains</li>
+        <li>Governance and distribution questions</li>
+      </ol>
       <p>
         The labour market effect is not simple job replacement. Acemoglu and Restrepo's task framework
         shows that automation shifts some tasks from labour to capital, creating a displacement effect,
@@ -302,6 +320,24 @@
         gain access to capabilities that previously belonged to large firms. If energy, compliance and
         platform costs remain bottlenecks, abundance will be uneven.
       </p>
+      <div class="signals-grid" aria-label="Australia signals">
+        <article>
+          <h3>Data trust</h3>
+          <p>Local data processing can reduce adoption friction for regulated sectors.</p>
+        </article>
+        <article>
+          <h3>Energy demand</h3>
+          <p>AI adoption is connected to electricity, cooling, storage and grid capacity.</p>
+        </article>
+        <article>
+          <h3>SME adoption</h3>
+          <p>Australian SMEs need confidence, clarity and usable workflow knowledge.</p>
+        </article>
+        <article>
+          <h3>Local infrastructure</h3>
+          <p>Compute, data processing and inference infrastructure shape access.</p>
+        </article>
+      </div>
     </section>
 
     <section id="scenarios" class="essay-section interactive-section" aria-labelledby="scenarios-heading">
@@ -312,20 +348,31 @@
         workflow capability could interact by 2027-2030.
       </p>
 
-      <div class="scenario-controls" aria-label="Scenario options">
-        <button type="button" data-scenario="baseline" aria-pressed="true">Baseline</button>
-        <button type="button" data-scenario="upside" aria-pressed="false">Upside</button>
-        <button type="button" data-scenario="downside" aria-pressed="false">Downside</button>
-      </div>
+      <div class="scenario-module">
+        <div class="scenario-controls" aria-label="Scenario options">
+          <button type="button" data-scenario="baseline" aria-pressed="true">
+            <span class="scenario-label">Baseline</span>
+            <span class="scenario-name">Patchy Abundance</span>
+          </button>
+          <button type="button" data-scenario="upside" aria-pressed="false">
+            <span class="scenario-label">Upside</span>
+            <span class="scenario-name">Trusted Clean AI Stack</span>
+          </button>
+          <button type="button" data-scenario="downside" aria-pressed="false">
+            <span class="scenario-label">Downside</span>
+            <span class="scenario-name">Bottlenecked Abundance</span>
+          </button>
+        </div>
 
-      <article class="scenario-card" aria-labelledby="scenario-card-heading" aria-live="polite">
-        <h3 id="scenario-card-heading">Patchy Abundance</h3>
-        <p id="scenario-card-copy">
-          Tokens continue to get cheaper and agent tools become easier to use. Students, freelancers,
-          software developers and SMEs adopt AI for micro-automation, but data governance, energy costs,
-          workflow redesign and verification skills lag behind model capability.
-        </p>
-      </article>
+        <article class="scenario-card" aria-labelledby="scenario-card-heading" aria-live="polite">
+          <h3 id="scenario-card-heading">Patchy Abundance</h3>
+          <p id="scenario-card-copy">
+            Tokens continue to get cheaper and agent tools become easier to use. Students, freelancers,
+            software developers and SMEs adopt AI for micro-automation, but data governance, energy costs,
+            workflow redesign and verification skills lag behind model capability.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section id="policy" class="essay-section" aria-labelledby="policy-heading">

@@ -44,6 +44,7 @@ function setupScenarioSwitcher() {
   const buttons = document.querySelectorAll("[data-scenario]");
   const heading = document.querySelector("#scenario-card-heading");
   const copy = document.querySelector("#scenario-card-copy");
+  const panel = document.querySelector(".scenario-card");
 
   if (!buttons.length || !heading || !copy) {
     return;
@@ -64,8 +65,13 @@ function setupScenarioSwitcher() {
         currentButton.setAttribute("aria-pressed", String(isSelected));
       });
 
-      heading.textContent = selectedScenario.heading;
-      copy.textContent = selectedScenario.copy;
+      panel?.classList.add("is-changing");
+
+      window.setTimeout(() => {
+        heading.textContent = selectedScenario.heading;
+        copy.textContent = selectedScenario.copy;
+        panel?.classList.remove("is-changing");
+      }, 120);
     });
   });
 }
@@ -74,6 +80,7 @@ function setupStackLayerInteraction() {
   const buttons = document.querySelectorAll("[data-stack-layer]");
   const heading = document.querySelector("#stack-panel-heading");
   const copy = document.querySelector("#stack-panel-copy");
+  const panel = document.querySelector(".stack-panel");
 
   if (!buttons.length || !heading || !copy) {
     return;
@@ -94,8 +101,13 @@ function setupStackLayerInteraction() {
         currentButton.setAttribute("aria-pressed", String(isSelected));
       });
 
-      heading.textContent = selectedLayer.heading;
-      copy.textContent = selectedLayer.copy;
+      panel?.classList.add("is-changing");
+
+      window.setTimeout(() => {
+        heading.textContent = selectedLayer.heading;
+        copy.textContent = selectedLayer.copy;
+        panel?.classList.remove("is-changing");
+      }, 120);
     });
   });
 }
