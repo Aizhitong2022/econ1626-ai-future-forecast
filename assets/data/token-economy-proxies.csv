@@ -1,0 +1,8 @@
+year,token_economy_proxy,evidence_value_for_essay,sources
+2021,OpenAI API removed its waitlist and opened access to developers in supported countries.,Token-based LLM access moved from closed beta toward broader developer experimentation.,OpenAI (2021)
+2023,"gpt-3.5-turbo reached US$2 per 1M tokens, and OpenAI said dedicated instances made sense for users above roughly 450M tokens/day.","Token demand was already large enough for industrial-scale API deployment, but prices also enabled smaller developers to experiment.","OpenAI (2023a)"
+2024,GPT-4o mini launched at US$0.15 input and US$0.60 output per 1M tokens.,Low-cost high-capability models made API use less like rare enterprise experimentation and more like routine software infrastructure.,Reuters (2024)
+2026,OpenAI's GPT-5.5 and GPT-5.4 mini pricing shows clear model price segmentation.,Developers can route high-value tasks to frontier models and ordinary tasks to cheaper models.,OpenAI (2026)
+2026,Research and industry commentary warn that agentic workflows can consume many more tokens than simple chat.,Cheap listed tokens do not automatically mean cheap agents; cost governance becomes part of the economic mechanism.,Reuters (2026b)
+2026,Reuters reports corporate concern about volatile AI bills and token-heavy workflows.,This supports the downside scenario: token abundance can create cost shocks if workflows are not governed.,Reuters (2026b)
+2026,Australia's Megaport announced A$458.9m AI infrastructure contracts and a planned A$827.3m raise for distributed AI inference cloud.,"Token demand is becoming physical infrastructure: GPUs, network, storage and inference capacity.",Reuters (2026a)

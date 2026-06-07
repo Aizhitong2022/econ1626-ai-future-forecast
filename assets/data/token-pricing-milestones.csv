@@ -1,0 +1,8 @@
+year_or_milestone,model_or_product_signal,price_converted_to_1m_tokens,what_it_shows,sources
+2020-2021,GPT-3 API era,Official source confirms API access; verified price not used here,"LLM access began as a controlled API product because large models were expensive to run, but API access lowered the barrier for smaller organisations and developers.","OpenAI (2020); OpenAI (2021)"
+2023,gpt-3.5-turbo,US$2 / 1M tokens,"OpenAI priced it at US$0.002 per 1K tokens and said it was 10x cheaper than existing GPT-3.5 models.","OpenAI (2023a)"
+2023,GPT-4 Turbo,US$10 / 1M input; US$30 / 1M output,"OpenAI said GPT-4 Turbo was 3x cheaper for input and 2x cheaper for output than GPT-4 while expanding context to 128k.","OpenAI (2023b)"
+2024,GPT-4o mini,US$0.15 / 1M input; US$0.60 / 1M output,Reuters reported GPT-4o mini as more than 60% cheaper than GPT-3.5 Turbo.,Reuters (2024)
+2026,GPT-5.5,US$5 / 1M input; US$30 / 1M output,"A frontier/professional model remains expensive for heavy output, but input costs are far below early high-end GPT-4 pricing.","OpenAI (2026)"
+2026,GPT-5.4 mini,US$0.75 / 1M input; US$4.50 / 1M output,"OpenAI's pricing separates high-capability models from cheaper everyday models, supporting model routing by task value.","OpenAI (2026)"
+2026,DeepSeek-V4-Flash,US$0.14 / 1M input cache miss; US$0.28 / 1M output,"DeepSeek shows the aggressive low-price frontier. This is a market signal, not proof that all high-quality AI is this cheap.","DeepSeek (2026)"

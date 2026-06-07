@@ -64,6 +64,8 @@ AI tool use is recorded in `notes/ai-use-log.md`. AI outputs were used for resea
 
 Evidence is drawn from official Australian sources, academic economics literature, company documentation, and reputable news sources listed in the essay references and mapped in `notes/source-map.md`.
 
+The `assets/data` folder contains CSV copies of the evidence tables used in the web essay. These files support transparency and reproducibility; the visible website still uses real HTML tables for accessibility.
+
 ## Reproducibility Note
 
 This site uses plain HTML, CSS, and JavaScript only. It is designed to work by opening `index.html` directly and to render cleanly on GitHub Pages.
