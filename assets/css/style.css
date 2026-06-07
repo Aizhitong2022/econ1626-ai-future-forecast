@@ -422,38 +422,122 @@ button[aria-pressed="true"] {
 }
 
 .stack-module {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(250px, 1.1fr) minmax(280px, 0.9fr);
   gap: 1.25rem;
   margin-top: 1.75rem;
+  padding-top: 2rem;
+}
+
+.stack-kicker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .stack-layers {
+  position: relative;
   margin: 0;
+  padding-left: 1rem;
+}
+
+.stack-layers::before {
+  content: "";
+  position: absolute;
+  left: 0.28rem;
+  top: 1.55rem;
+  bottom: 1.55rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(47, 143, 114, 0.08), rgba(47, 143, 114, 0.48), rgba(47, 143, 114, 0.08));
 }
 
 .stack-layers button {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.75rem;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  min-height: 3.35rem;
+  min-height: 3.75rem;
+  border-color: rgba(25, 57, 46, 0.22);
+  background: rgba(255, 253, 247, 0.86);
   text-align: left;
 }
 
 .stack-layers button::after {
   content: "";
-  width: 0.55rem;
-  height: 0.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 999px;
   background: var(--accent);
-  opacity: 0.4;
+  opacity: 0.35;
+  transition: opacity 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .stack-layers button[aria-pressed="true"]::after {
   background: #a9dec9;
   opacity: 1;
+  transform: scale(1.15);
+}
+
+.stack-layers button[aria-pressed="true"] {
+  border-color: rgba(47, 143, 114, 0.68);
+  background: var(--forest-soft);
+  color: var(--paper-strong);
+  box-shadow: 0 14px 28px rgba(25, 57, 46, 0.12);
+}
+
+.layer-icon {
+  display: inline-grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid rgba(47, 143, 114, 0.28);
+  border-radius: 0.5rem;
+  background: rgba(220, 235, 228, 0.44);
+  color: var(--forest-soft);
+}
+
+.layer-icon svg {
+  width: 1.08rem;
+  height: 1.08rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stack-layers button[aria-pressed="true"] .layer-icon {
+  border-color: rgba(169, 222, 201, 0.7);
+  background: rgba(169, 222, 201, 0.16);
+  color: #c3ead9;
+}
+
+.layer-copy {
+  display: grid;
+  gap: 0.08rem;
+  min-width: 0;
+}
+
+.layer-copy span {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.stack-layers button[aria-pressed="true"] .layer-copy span {
+  color: rgba(255, 253, 247, 0.68);
 }
 
 .info-panel,
@@ -474,11 +558,22 @@ button[aria-pressed="true"] {
 }
 
 .stack-panel {
-  min-height: 15rem;
+  min-height: 16.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
+  padding: 1.6rem;
+}
+
+.panel-label {
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .scenario-module {
@@ -664,6 +759,30 @@ button[aria-pressed="true"] {
 
   .essay-section {
     padding: 1.35rem;
+  }
+
+  .stack-module {
+    padding-top: 1.65rem;
+  }
+
+  .stack-layers {
+    padding-left: 0.7rem;
+  }
+
+  .stack-layers button {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    min-height: 3.55rem;
+    padding: 0.68rem 0.75rem;
+  }
+
+  .layer-icon {
+    width: 1.85rem;
+    height: 1.85rem;
+  }
+
+  .stack-panel {
+    min-height: 12rem;
+    padding: 1.25rem;
   }
 
   .causal-chain {
